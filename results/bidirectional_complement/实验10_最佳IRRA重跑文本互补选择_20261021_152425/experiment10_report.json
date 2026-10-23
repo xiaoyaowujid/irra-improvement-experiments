@@ -1,0 +1,181 @@
+{
+  "experiment": "EXP10 new BEST Epoch58 IRRA rerun of retained EXP09 with matched fresh Warmup",
+  "model_branches": [
+    "no_support",
+    "selected_support"
+  ],
+  "baseline_methods": [
+    "best_epoch58_original_IRRA",
+    "new_best_checkpoint_warmup_alpha1"
+  ],
+  "alpha_lock": 0.25,
+  "alpha_choice": "Training holdout Warmup mAP ONLY; not Val",
+  "results": [
+    {
+      "method": "original_IRRA",
+      "selected_alpha": 0.25,
+      "seeds": 1,
+      "R1_mean": 66.43390711269893,
+      "R1_sd": 0.0,
+      "delta_R1_vs_IRRA_pp": 0.0,
+      "R5_mean": 85.28743098408574,
+      "R5_sd": 0.0,
+      "delta_R5_vs_IRRA_pp": 0.0,
+      "R10_mean": 90.56511854498214,
+      "R10_sd": 0.0,
+      "delta_R10_vs_IRRA_pp": 0.0,
+      "mAP_mean": 61.86361930698682,
+      "mAP_sd": 0.0,
+      "delta_mAP_vs_IRRA_pp": 0.0,
+      "mINP_mean": 47.24753514041005,
+      "mINP_sd": 0.0,
+      "delta_mINP_vs_IRRA_pp": 0.0
+    },
+    {
+      "method": "warmup_original",
+      "selected_alpha": 0.25,
+      "seeds": 3,
+      "R1_mean": 66.29858179062465,
+      "R1_sd": 0.061480008074056236,
+      "delta_R1_vs_IRRA_pp": -0.13532532207428005,
+      "R5_mean": 85.23871386813902,
+      "R5_sd": 0.04296445779579066,
+      "delta_R5_vs_IRRA_pp": -0.04871711594672945,
+      "R10_mean": 90.4785103388546,
+      "R10_sd": 0.033804254619450115,
+      "delta_R10_vs_IRRA_pp": -0.08660820612753639,
+      "mAP_mean": 61.848292339043184,
+      "mAP_sd": 0.021915842605909452,
+      "delta_mAP_vs_IRRA_pp": -0.015326967943636305,
+      "mINP_mean": 47.23476670770444,
+      "mINP_sd": 0.015095974083889461,
+      "delta_mINP_vs_IRRA_pp": -0.012768432705613009
+    },
+    {
+      "method": "warmup_locked",
+      "selected_alpha": 0.25,
+      "seeds": 3,
+      "R1_mean": 66.31482082927357,
+      "R1_sd": 0.009375613335326084,
+      "delta_R1_vs_IRRA_pp": -0.11908628342536076,
+      "R5_mean": 85.25495290678792,
+      "R5_sd": 0.03247807729782437,
+      "delta_R5_vs_IRRA_pp": -0.03247807729782437,
+      "R10_mean": 90.61383566092888,
+      "R10_sd": 0.016239038648912185,
+      "delta_R10_vs_IRRA_pp": 0.04871711594674366,
+      "mAP_mean": 61.891653993577656,
+      "mAP_sd": 0.006634153645699482,
+      "delta_mAP_vs_IRRA_pp": 0.028034686590835634,
+      "mINP_mean": 47.34177405003184,
+      "mINP_sd": 0.008277301481432676,
+      "delta_mINP_vs_IRRA_pp": 0.0942389096217866
+    },
+    {
+      "method": "no_support",
+      "selected_alpha": 0.25,
+      "seeds": 3,
+      "R1_mean": 66.34188589368843,
+      "R1_sd": 0.0248055412739876,
+      "delta_R1_vs_IRRA_pp": -0.09202121901050475,
+      "R5_mean": 85.26577893255386,
+      "R5_sd": 0.009375613335326084,
+      "delta_R5_vs_IRRA_pp": -0.02165205153188765,
+      "R10_mean": 90.6084226480459,
+      "R10_sd": 0.009375613335326084,
+      "delta_R10_vs_IRRA_pp": 0.04330410306376109,
+      "mAP_mean": 61.89760349345992,
+      "mAP_sd": 0.006902433257243496,
+      "delta_mAP_vs_IRRA_pp": 0.03398418647309853,
+      "mINP_mean": 47.33764080376719,
+      "mINP_sd": 0.00652750068615891,
+      "delta_mINP_vs_IRRA_pp": 0.09010566335713577
+    },
+    {
+      "method": "selected_support",
+      "selected_alpha": 0.25,
+      "seeds": 3,
+      "R1_mean": 66.33647288080545,
+      "R1_sd": 0.016239038648912185,
+      "delta_R1_vs_IRRA_pp": -0.09743423189348732,
+      "R5_mean": 85.26036591967089,
+      "R5_sd": 0.009375613335326084,
+      "delta_R5_vs_IRRA_pp": -0.02706506441485601,
+      "R10_mean": 90.61383566092888,
+      "R10_sd": 0.016239038648912185,
+      "delta_R10_vs_IRRA_pp": 0.04871711594674366,
+      "mAP_mean": 61.896648233193766,
+      "mAP_sd": 0.005655664345788293,
+      "delta_mAP_vs_IRRA_pp": 0.03302892620694564,
+      "mINP_mean": 47.33721579676294,
+      "mINP_sd": 0.006496414390556731,
+      "delta_mINP_vs_IRRA_pp": 0.0896806563528898
+    }
+  ],
+  "selector_identity_holdout": {
+    "n_support_pairs": 12640,
+    "class_counts": [
+      4502,
+      981,
+      7157
+    ],
+    "dual_objective_harmful_recall_useful_recall_harmonic": 0.6076909088036941,
+    "both_classes_present": true,
+    "confusion_rows_true_cols_pred": [
+      [
+        2043,
+        1199,
+        1260
+      ],
+      [
+        89,
+        315,
+        577
+      ],
+      [
+        197,
+        379,
+        6581
+      ]
+    ],
+    "recall_harmful_uncertain_useful": [
+      0.4537983118613949,
+      0.3211009174311927,
+      0.9195193516836664
+    ],
+    "precision_harmful_uncertain_useful": [
+      0.8772005152425933,
+      0.1664025356576862,
+      0.7817771442147778
+    ],
+    "macro_recall_present": 0.5648061936587513,
+    "reject_harmful_rate": 0.3434029320302088,
+    "accept_useful_rate": 0.8458851474081319,
+    "accepted_fraction_all": 0.5815664556962026,
+    "rejected_fraction_all": 0.13045886075949367,
+    "unresolved_fraction_all": 0.2879746835443038,
+    "accepted_true_useful_precision": 0.8235614202149367,
+    "accepted_proxy_margin_mean": 0.04515986144542694,
+    "rejected_proxy_margin_mean": -0.047285765409469604,
+    "warning": "Labels are image-and-hard-negative based utility PROXIES, not verified natural-language truth. Identity-assisted triage is ORACLE diagnostics; no Val PID use in inference."
+  },
+  "no_val_pid_in_scoring": true,
+  "limitations": [
+    "Support truth/usefulness is defined by frozen IRRA ranking-utility proxy, not natural language factual labels.",
+    "The student cannot select unavailable support at inference; it transfers supervision from train-time selected support.",
+    "Heldout TRAIN PID used to lock alpha; not independent test of hyperparameter generalization.",
+    "Validation repeatedly used in prior experiments; all alpha sweep results there are descriptive, never use Val optimum to make claims.",
+    "Both students have identical architecture and same training protocol; no_support controls extra optimization but not all conceivable regularization mechanisms.",
+    "Scoring is original IRRA fixed Top-K full-gallery reranking; not independent-index vector retrieval."
+  ],
+  "success_criteria": [
+    "Both useful acceptance and harmful rejection must be nondegenerate on unseen TRAIN identities",
+    "selected_support must exceed best IRRA Epoch58, freshly retrained Warmup (alpha=1), and no_support under locked alpha across seeds",
+    "R1 and mAP, paired repairs and harms are both analyzed; no success claim from one seed or Val-tuned alpha"
+  ],
+  "research_objectives": [
+    "1: reliable multi-text complementarity",
+    "2: reliable multi-view image complementarity",
+    "3: strict positive joint fusion"
+  ]
+}

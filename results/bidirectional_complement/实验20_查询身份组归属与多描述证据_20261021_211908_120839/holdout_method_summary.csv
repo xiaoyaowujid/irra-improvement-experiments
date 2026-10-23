@@ -1,0 +1,6 @@
+﻿method,n_queries,n_accepted,coverage,correct_identity_source_per_query,precision_when_accepted,n_top1_wrong,top1_wrong_fixed,top1_right_broken,net_correct_vs_top1_when_unaccepted_fallback,n_accepted_with_multiple_source_images
+single_top1,542,542,1.0,0.7546125461254612,0.7546125461254612,133,0,0,0,
+experiment19_old_no_reject,542,542,1.0,0.7619926199261993,0.7619926199261993,133,19,15,4,
+experiment20_multi_evidence_no_reject,542,542,1.0,0.7509225092250923,0.7509225092250923,133,20,22,-2,210
+experiment20_multi_evidence_90cv,542,229,0.4225092250922509,0.37453874538745385,0.8864628820960698,133,3,4,-1,97
+experiment20_multi_evidence_95cv,542,65,0.11992619926199262,0.11808118081180811,0.9846153846153847,133,0,0,0,32

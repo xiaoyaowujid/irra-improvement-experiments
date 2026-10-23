@@ -1,0 +1,25 @@
+{
+  "experiment": "实验11_新增语义视觉证据与有害拒绝",
+  "best_checkpoint_sha256": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "original_irra_modified": false,
+  "trainable_models": 0,
+  "selected_cases": 200,
+  "split": "CUHK-PEDES Train exclusively",
+  "evaluation": "Teacher-side mechanism diagnostic only",
+  "no_val_or_test_pid": true,
+  "study_goals": [
+    "reliably identify true new semantic attributes",
+    "accept useful visually evidenced support",
+    "explicitly reject contradictory support while abstaining on uncertainty"
+  ],
+  "limitation": "Global prompt differences and caption-based controls are proxies, not annotated visual truth.",
+  "artifacts": [
+    "selector_diagnostics.json",
+    "all_pair_decisions.csv",
+    "visual_calibration.json",
+    "decision_summary.csv",
+    "semantic_parse_coverage.csv",
+    "人工核查200例.csv",
+    "人工核查200例.html"
+  ]
+}

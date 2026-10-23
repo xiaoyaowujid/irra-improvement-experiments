@@ -1,0 +1,222 @@
+{
+  "baseline": {
+    "R1": 66.43390711269893,
+    "R5": 85.28743098408574,
+    "R10": 90.56511854498214,
+    "mAP": 61.86361930698682,
+    "mINP": 47.24753514041005
+  },
+  "aggregate": [
+    {
+      "method": "t1_only",
+      "seeds": 3,
+      "R1_mean": 66.35271191945436,
+      "R1_std": 0.016239038648912185,
+      "R1_vs_irra_pp": -0.08119519324456803,
+      "R5_mean": 85.29284399696871,
+      "R5_std": 0.0248055412739876,
+      "R5_vs_irra_pp": 0.00541301288296836,
+      "R10_mean": 90.6084226480459,
+      "R10_std": 0.033804254619455805,
+      "R10_vs_irra_pp": 0.04330410306376109,
+      "mAP_mean": 61.91672485130449,
+      "mAP_std": 0.002012832092224616,
+      "mAP_vs_irra_pp": 0.0531055443176669,
+      "mINP_mean": 47.323521602130164,
+      "mINP_std": 0.006855524416045364,
+      "mINP_vs_irra_pp": 0.07598646172011314,
+      "feature_cos_to_base_mean": 0.9997945427894592,
+      "feature_cos_to_base_std": 1.282871421681668e-05
+    },
+    {
+      "method": "all_same_pid",
+      "seeds": 3,
+      "R1_mean": 66.36353794522032,
+      "R1_std": 0.00937561333533429,
+      "R1_vs_irra_pp": -0.0703691674786171,
+      "R5_mean": 85.45523438345784,
+      "R5_std": 0.033804254619455805,
+      "R5_vs_irra_pp": 0.1678033993720902,
+      "R10_mean": 90.58677059651403,
+      "R10_std": 0.03750245334132075,
+      "R10_vs_irra_pp": 0.02165205153188765,
+      "mAP_mean": 61.9676142072659,
+      "mAP_std": 0.0076662679732107065,
+      "mAP_vs_irra_pp": 0.10399490027908342,
+      "mINP_mean": 47.39993039975554,
+      "mINP_std": 0.02319074627688631,
+      "mINP_vs_irra_pp": 0.15239525934548936,
+      "feature_cos_to_base_mean": 0.9994539419809977,
+      "feature_cos_to_base_std": 1.88650662415496e-05
+    },
+    {
+      "method": "filtered_same_pid",
+      "seeds": 3,
+      "R1_mean": 66.36353794522033,
+      "R1_std": 0.0656292933473072,
+      "R1_vs_irra_pp": -0.07036916747860289,
+      "R5_mean": 85.40651726751109,
+      "R5_std": 0.046878066676655034,
+      "R5_vs_irra_pp": 0.11908628342534655,
+      "R10_mean": 90.59759662227998,
+      "R10_std": 0.03247807729782437,
+      "R10_vs_irra_pp": 0.03247807729783858,
+      "mAP_mean": 61.945427387938786,
+      "mAP_std": 0.01399102317629079,
+      "mAP_vs_irra_pp": 0.08180808095196568,
+      "mINP_mean": 47.36336174617791,
+      "mINP_std": 0.0037146844207271734,
+      "mINP_vs_irra_pp": 0.11582660576785742,
+      "feature_cos_to_base_mean": 0.9997324546178182,
+      "feature_cos_to_base_std": 5.49861597536009e-06
+    }
+  ],
+  "paired": [
+    {
+      "seed": 42,
+      "comparison": "all_same_pid - t1_only",
+      "newly_correct": 21,
+      "newly_wrong": 20,
+      "net_correct": 1,
+      "delta_R1_pp": 0.016239038648911984
+    },
+    {
+      "seed": 42,
+      "comparison": "filtered_same_pid - t1_only",
+      "newly_correct": 12,
+      "newly_wrong": 9,
+      "net_correct": 3,
+      "delta_R1_pp": 0.04871711594673595
+    },
+    {
+      "seed": 42,
+      "comparison": "filtered_same_pid - all_same_pid",
+      "newly_correct": 11,
+      "newly_wrong": 9,
+      "net_correct": 2,
+      "delta_R1_pp": 0.03247807729782397
+    },
+    {
+      "seed": 43,
+      "comparison": "all_same_pid - t1_only",
+      "newly_correct": 19,
+      "newly_wrong": 20,
+      "net_correct": -1,
+      "delta_R1_pp": -0.016239038648911984
+    },
+    {
+      "seed": 43,
+      "comparison": "filtered_same_pid - t1_only",
+      "newly_correct": 7,
+      "newly_wrong": 12,
+      "net_correct": -5,
+      "delta_R1_pp": -0.08119519324455993
+    },
+    {
+      "seed": 43,
+      "comparison": "filtered_same_pid - all_same_pid",
+      "newly_correct": 10,
+      "newly_wrong": 14,
+      "net_correct": -4,
+      "delta_R1_pp": -0.06495615459564794
+    },
+    {
+      "seed": 44,
+      "comparison": "all_same_pid - t1_only",
+      "newly_correct": 25,
+      "newly_wrong": 23,
+      "net_correct": 2,
+      "delta_R1_pp": 0.03247807729782397
+    },
+    {
+      "seed": 44,
+      "comparison": "filtered_same_pid - t1_only",
+      "newly_correct": 14,
+      "newly_wrong": 10,
+      "net_correct": 4,
+      "delta_R1_pp": 0.06495615459564794
+    },
+    {
+      "seed": 44,
+      "comparison": "filtered_same_pid - all_same_pid",
+      "newly_correct": 13,
+      "newly_wrong": 11,
+      "net_correct": 2,
+      "delta_R1_pp": 0.03247807729782397
+    }
+  ],
+  "teacher_diagnostic": {
+    "fit": {
+      "pairs": 10806,
+      "total_captions": 10806,
+      "true_accept_rate_proxy": 0.33546178049231906,
+      "matched_wrong_support_rejection_rate_proxy": 0.978808069590968,
+      "wrong_support_false_accept_rate_proxy": 0.021191930409032018,
+      "true_identity_gate_accuracy": 0.9503979270775496,
+      "wrong_identity_gate_rejection": 0.9516009624282806,
+      "novelty_cutoff": 0.4280022829771042,
+      "novelty_mean": 0.3917970359325409,
+      "wrong_match_error_mean": 0.13465949892997742,
+      "wrong_match_error_p90": 0.31628531217575073,
+      "wrong_match_error_gt_0.05": 0.6384416065148991
+    },
+    "holdout": {
+      "pairs": 2696,
+      "total_captions": 2696,
+      "true_accept_rate_proxy": 0.3434718100890208,
+      "matched_wrong_support_rejection_rate_proxy": 0.9799703264094956,
+      "wrong_support_false_accept_rate_proxy": 0.020029673590504452,
+      "true_identity_gate_accuracy": 0.9532640949554896,
+      "wrong_identity_gate_rejection": 0.9510385756676558,
+      "novelty_cutoff": 0.4280022829771042,
+      "novelty_mean": 0.3987768590450287,
+      "wrong_match_error_mean": 0.13410118222236633,
+      "wrong_match_error_p90": 0.32164278626441956,
+      "wrong_match_error_gt_0.05": 0.6394658753709199
+    },
+    "holdout_teacher_third_view": {
+      "n_triple_view": 2020,
+      "teacher_oracle_not_deployable": true,
+      "do_not_use_to_fit_threshold": true,
+      "methods": {
+        "t1_only": {
+          "n": 2020,
+          "third_view_pair_win_rate": 0.6128712871287129,
+          "mean_margin": 0.02232389897108078
+        },
+        "all_same_pid": {
+          "n": 2020,
+          "third_view_pair_win_rate": 0.7658415841584159,
+          "mean_margin": 0.07114706933498383,
+          "margin_improved_fraction": 0.8495049504950495,
+          "margin_harmed_fraction": 0.149009900990099,
+          "mean_margin_delta": 0.048823174089193344
+        },
+        "filtered_same_pid": {
+          "n": 2020,
+          "third_view_pair_win_rate": 0.7059405940594059,
+          "mean_margin": 0.04779127240180969,
+          "margin_improved_fraction": 0.32772277227722774,
+          "margin_harmed_fraction": 0.02574257425742574,
+          "mean_margin_delta": 0.025467371568083763
+        }
+      }
+    },
+    "limitations": [
+      "True-PID is only used in TRAIN split to construct support/negative provenance",
+      "The gate distinguishes same-PID from matched wrong-PID support, NOT actual factual errors in same-PID captions",
+      "Novelty is embedding distance above same-image caption redundancy threshold, not human-verified semantic novelty",
+      "Third image C is held out from support selection; C ranking only a diagnostic, NOT a deployable inference",
+      "Val query never has a support T2 or PID-conditioned teacher"
+    ]
+  },
+  "checkpoint_sha256": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "evaluation": "Full Validation; one-caption student; no PID in inference",
+  "limitations": [
+    "True-PID is only used in TRAIN split to construct support/negative provenance",
+    "The gate distinguishes same-PID from matched wrong-PID support, NOT actual factual errors in same-PID captions",
+    "Novelty is embedding distance above same-image caption redundancy threshold, not human-verified semantic novelty",
+    "Third image C is held out from support selection; C ranking only a diagnostic, NOT a deployable inference",
+    "Val query never has a support T2 or PID-conditioned teacher"
+  ]
+}

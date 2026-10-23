@@ -1,0 +1,264 @@
+{
+  "version": "exp20_v1_query_to_group_multi_evidence_controlled",
+  "exp19_replay": {
+    "replayed_queries": 542,
+    "original_model_selected_groups_identical": true,
+    "score_max_absolute_tolerance": 2e-05
+  },
+  "fit_folds": [
+    {
+      "fold": 0,
+      "pid_count": 440,
+      "n_train_queries": 262,
+      "n_with_true_group": 262
+    },
+    {
+      "fold": 1,
+      "pid_count": 440,
+      "n_train_queries": 265,
+      "n_with_true_group": 258
+    },
+    {
+      "fold": 2,
+      "pid_count": 440,
+      "n_train_queries": 255,
+      "n_with_true_group": 251
+    },
+    {
+      "fold": 3,
+      "pid_count": 440,
+      "n_train_queries": 256,
+      "n_with_true_group": 253
+    }
+  ],
+  "new_90_95_cv_thresholds": {
+    "precision90": {
+      "threshold": 0.9859933700247361,
+      "n_accepted_cv": 414,
+      "cv_precision": 0.9009661835748792,
+      "cv_coverage": 0.3988439306358382,
+      "target_met_on_fit": true,
+      "desired_precision": 0.9
+    },
+    "precision95": {
+      "threshold": 0.9943445656816629,
+      "n_accepted_cv": 106,
+      "cv_precision": 0.9528301886792453,
+      "cv_coverage": 0.10211946050096339,
+      "target_met_on_fit": true,
+      "desired_precision": 0.95
+    }
+  },
+  "comparison": {
+    "n_queries": 542,
+    "n_query_pid": 271,
+    "n_top1_wrong": 133,
+    "n_positive_in_candidate_pool": 536,
+    "old_and_new_same_selected_group": 515,
+    "old_wrong_new_right": 4,
+    "old_right_new_wrong": 10,
+    "new_fixes_top1_errors": 20,
+    "new_breaks_top1_correct": 22,
+    "old_fixes_top1_errors": 19,
+    "old_breaks_top1_correct": 15,
+    "graph_statistics": {
+      "n_images": 637,
+      "n_groups": 502,
+      "n_multiview_groups": 124,
+      "n_pure_multiview_groups": 119,
+      "n_impure_groups": 5,
+      "n_same_pid_pairs": 226,
+      "n_proposed_pairs": 151,
+      "n_correct_pairs": 145,
+      "pair_precision": 0.9602649006622517,
+      "pair_recall": 0.6415929203539823,
+      "whole_group_purity": 0.9900398406374502
+    },
+    "old_exp19_cv_threshold": {
+      "threshold": 0.9929895646731793,
+      "n_accepted_cv": 87,
+      "cv_precision": 0.9540229885057471,
+      "cv_coverage": 0.0838150289017341,
+      "target_met_on_fit": true,
+      "desired_precision": 0.95
+    },
+    "exp19_source": "G:\\PyCharmProjects\\IRRA\\IRRA-main\\图文双向互补实验\\实验19_全图库双层身份关联与文本归属_20261021_205519_053300",
+    "exp16_image_similarity_threshold_fit_only": 0.7837574481964111
+  },
+  "methods": [
+    {
+      "method": "single_top1",
+      "n_queries": 542,
+      "n_accepted": 542,
+      "coverage": 1.0,
+      "correct_identity_source_per_query": 0.7546125461254612,
+      "precision_when_accepted": 0.7546125461254612,
+      "n_top1_wrong": 133,
+      "top1_wrong_fixed": 0,
+      "top1_right_broken": 0,
+      "net_correct_vs_top1_when_unaccepted_fallback": 0,
+      "n_accepted_with_multiple_source_images": null
+    },
+    {
+      "method": "experiment19_old_no_reject",
+      "n_queries": 542,
+      "n_accepted": 542,
+      "coverage": 1.0,
+      "correct_identity_source_per_query": 0.7619926199261993,
+      "precision_when_accepted": 0.7619926199261993,
+      "n_top1_wrong": 133,
+      "top1_wrong_fixed": 19,
+      "top1_right_broken": 15,
+      "net_correct_vs_top1_when_unaccepted_fallback": 4,
+      "n_accepted_with_multiple_source_images": null
+    },
+    {
+      "method": "experiment20_multi_evidence_no_reject",
+      "n_queries": 542,
+      "n_accepted": 542,
+      "coverage": 1.0,
+      "correct_identity_source_per_query": 0.7509225092250923,
+      "precision_when_accepted": 0.7509225092250923,
+      "n_top1_wrong": 133,
+      "top1_wrong_fixed": 20,
+      "top1_right_broken": 22,
+      "net_correct_vs_top1_when_unaccepted_fallback": -2,
+      "n_accepted_with_multiple_source_images": 210
+    },
+    {
+      "method": "experiment20_multi_evidence_90cv",
+      "n_queries": 542,
+      "n_accepted": 229,
+      "coverage": 0.4225092250922509,
+      "correct_identity_source_per_query": 0.37453874538745385,
+      "precision_when_accepted": 0.8864628820960698,
+      "n_top1_wrong": 133,
+      "top1_wrong_fixed": 3,
+      "top1_right_broken": 4,
+      "net_correct_vs_top1_when_unaccepted_fallback": -1,
+      "n_accepted_with_multiple_source_images": 97
+    },
+    {
+      "method": "experiment20_multi_evidence_95cv",
+      "n_queries": 542,
+      "n_accepted": 65,
+      "coverage": 0.11992619926199262,
+      "correct_identity_source_per_query": 0.11808118081180811,
+      "precision_when_accepted": 0.9846153846153847,
+      "n_top1_wrong": 133,
+      "top1_wrong_fixed": 0,
+      "top1_right_broken": 0,
+      "net_correct_vs_top1_when_unaccepted_fallback": 0,
+      "n_accepted_with_multiple_source_images": 32
+    }
+  ],
+  "true_group_rank": [
+    {
+      "cohort": "all",
+      "ranker": "old",
+      "queries": 542,
+      "n_missing_true_group": 6,
+      "n_true_group_rank1": 413,
+      "n_true_group_rank_le3": 477,
+      "n_true_group_rank_le5": 505,
+      "n_true_group_rank_le10": 522,
+      "n_true_group_rank_le20": 530
+    },
+    {
+      "cohort": "all",
+      "ranker": "new",
+      "queries": 542,
+      "n_missing_true_group": 6,
+      "n_true_group_rank1": 407,
+      "n_true_group_rank_le3": 479,
+      "n_true_group_rank_le5": 504,
+      "n_true_group_rank_le10": 521,
+      "n_true_group_rank_le20": 532
+    },
+    {
+      "cohort": "top1_wrong",
+      "ranker": "old",
+      "queries": 133,
+      "n_missing_true_group": 5,
+      "n_true_group_rank1": 19,
+      "n_true_group_rank_le3": 72,
+      "n_true_group_rank_le5": 99,
+      "n_true_group_rank_le10": 114,
+      "n_true_group_rank_le20": 122
+    },
+    {
+      "cohort": "top1_wrong",
+      "ranker": "new",
+      "queries": 133,
+      "n_missing_true_group": 5,
+      "n_true_group_rank1": 20,
+      "n_true_group_rank_le3": 74,
+      "n_true_group_rank_le5": 98,
+      "n_true_group_rank_le10": 113,
+      "n_true_group_rank_le20": 124
+    },
+    {
+      "cohort": "top1_right",
+      "ranker": "old",
+      "queries": 409,
+      "n_missing_true_group": 1,
+      "n_true_group_rank1": 394,
+      "n_true_group_rank_le3": 405,
+      "n_true_group_rank_le5": 406,
+      "n_true_group_rank_le10": 408,
+      "n_true_group_rank_le20": 408
+    },
+    {
+      "cohort": "top1_right",
+      "ranker": "new",
+      "queries": 409,
+      "n_missing_true_group": 1,
+      "n_true_group_rank1": 387,
+      "n_true_group_rank_le3": 405,
+      "n_true_group_rank_le5": 406,
+      "n_true_group_rank_le10": 408,
+      "n_true_group_rank_le20": 408
+    }
+  ],
+  "bootstrap": {
+    "new_minus_old_accuracy": {
+      "pid_cluster_95ci_percentage_points": [
+        -2.3985239852398523,
+        0.18450184501845018
+      ]
+    },
+    "new_minus_top1_accuracy": {
+      "pid_cluster_95ci_percentage_points": [
+        -2.5830258302583027,
+        1.8450184501845017
+      ]
+    },
+    "new_minus_old_top1_error_repairs": {
+      "pid_cluster_95ci_percentage_points": [
+        -0.7380073800738007,
+        1.107011070110701
+      ]
+    },
+    "new_minus_old_top1_correct_harms": {
+      "pid_cluster_95ci_percentage_points": [
+        0.36900369003690037,
+        2.3985239852398523
+      ]
+    }
+  },
+  "only_train_image_captions_for_support": true,
+  "holdout_PID_only_for_posthoc_audit": true,
+  "A_B_C_independent_images": true,
+  "no_new_visual_group_clustering": true,
+  "same_exp19_group_candidates": true,
+  "no_val_gallery_captions": true,
+  "does_not_train_IRRA_or_text_fusion": true,
+  "interpretation_warnings": [
+    "Only first hard problem (query attribution to same-ID B image group) is tested. No multi-text utility filtering or fusion.",
+    "Extra features jointly aggregate TRAIN captions by distinct source images; group matching still needs legal gallery descriptions.",
+    "Train-holdout PIDs were previously seen by frozen IRRA; not unseen-ID encoder evaluation.",
+    "Candidate recall and fixed B graph may already be high; new classifier can fail or reduce accuracy.",
+    "Precision conditioned on abstention is NOT coverage or Top1-error correction.",
+    "No official CUHK-PEDES Validation improvement is claimed."
+  ]
+}

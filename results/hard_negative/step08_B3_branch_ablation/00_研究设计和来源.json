@@ -1,0 +1,28 @@
+{
+  "version": "irra_b3_branch_ablation_v1_20261021",
+  "created": "2026-10-21T18:38:56.419728",
+  "source_directory": "G:\\PyCharmProjects\\IRRA\\IRRA-main\\硬负样本分析\\第六步_最佳IRRA_Epoch58_硬负样本B0B3_20261021_162009",
+  "source_id": "a58655e550e711caa33c68dab35d9798fd3701894e764beee3f94422370c64c1",
+  "checkpoint_sha": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "config_sha": "ec2fae46ec4e0cce06372789afe1c877a5cebeddf73654781e11b0484fc30fac",
+  "frozen_alpha": 0.5,
+  "method": "B3_mixed",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "variants": [
+    "B0_original",
+    "text_only",
+    "image_only",
+    "both"
+  ],
+  "val_text_count": 6158,
+  "val_gallery_count": 3078,
+  "val_pid_count": 1000,
+  "only_val": true,
+  "no_training": true,
+  "no_test_selection": true,
+  "notes": "仅考察已训练B3 Adapter的模态贡献，不能在本步重新调整alpha或用Test挑选分支。"
+}

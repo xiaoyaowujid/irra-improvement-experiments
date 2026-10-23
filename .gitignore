@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.ipynb_checkpoints/
+
+# 数据与权重（体积过大，可由脚本重新生成）
+datasets/
+data/
+logs/
+images/
+*.npy
+*.pt
+*.pth
+*.pkl
+*.zip
+
+# 逐查询大文件
+*per_query*.csv
+*holdout_all_queries*.csv
+*cv_*_fold*.json
+final_set_*.json
+final_rival_*.json
+query_deltas.csv
+case_changes.csv
+
+# 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

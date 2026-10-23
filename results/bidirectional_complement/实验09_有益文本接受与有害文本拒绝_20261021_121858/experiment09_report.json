@@ -1,0 +1,181 @@
+{
+  "experiment": "EXP09 reliable support acceptance/rejection and locked alpha",
+  "model_branches": [
+    "no_support",
+    "selected_support"
+  ],
+  "baseline_methods": [
+    "original_IRRA",
+    "EXP07_warmup_original_alpha1"
+  ],
+  "alpha_lock": 1.0,
+  "alpha_choice": "Training holdout Warmup mAP ONLY; not Val",
+  "results": [
+    {
+      "method": "original_IRRA",
+      "selected_alpha": 1.0,
+      "seeds": 1,
+      "R1_mean": 56.83663527119195,
+      "R1_sd": 0.0,
+      "delta_R1_vs_IRRA_pp": 0.0,
+      "R5_mean": 78.46703475154271,
+      "R5_sd": 0.0,
+      "delta_R5_vs_IRRA_pp": 0.0,
+      "R10_mean": 86.0506658005846,
+      "R10_sd": 0.0,
+      "delta_R10_vs_IRRA_pp": 0.0,
+      "mAP_mean": 53.03874644998113,
+      "mAP_sd": 0.0,
+      "delta_mAP_vs_IRRA_pp": 0.0,
+      "mINP_mean": 38.20492358386363,
+      "mINP_sd": 0.0,
+      "delta_mINP_vs_IRRA_pp": 0.0
+    },
+    {
+      "method": "warmup_original",
+      "selected_alpha": 1.0,
+      "seeds": 3,
+      "R1_mean": 57.80556457724369,
+      "R1_sd": 0.07674270260234925,
+      "delta_R1_vs_IRRA_pp": 0.9689293060517414,
+      "R5_mean": 79.21403052939266,
+      "R5_sd": 0.056253680011981125,
+      "delta_R5_vs_IRRA_pp": 0.7469957778499463,
+      "R10_mean": 86.35920753491393,
+      "R10_sd": 0.07078432841085297,
+      "delta_R10_vs_IRRA_pp": 0.3085417343293386,
+      "mAP_mean": 53.646395427217186,
+      "mAP_sd": 0.005395943139563026,
+      "delta_mAP_vs_IRRA_pp": 0.6076489772360532,
+      "mINP_mean": 38.62623567615657,
+      "mINP_sd": 0.01447976538889823,
+      "delta_mINP_vs_IRRA_pp": 0.4213120922929363
+    },
+    {
+      "method": "warmup_locked",
+      "selected_alpha": 1.0,
+      "seeds": 3,
+      "R1_mean": 57.80556457724369,
+      "R1_sd": 0.07674270260234925,
+      "delta_R1_vs_IRRA_pp": 0.9689293060517414,
+      "R5_mean": 79.21403052939266,
+      "R5_sd": 0.056253680011981125,
+      "delta_R5_vs_IRRA_pp": 0.7469957778499463,
+      "R10_mean": 86.35920753491393,
+      "R10_sd": 0.07078432841085297,
+      "delta_R10_vs_IRRA_pp": 0.3085417343293386,
+      "mAP_mean": 53.646395427217186,
+      "mAP_sd": 0.005395943139563026,
+      "delta_mAP_vs_IRRA_pp": 0.6076489772360532,
+      "mINP_mean": 38.62623567615657,
+      "mINP_sd": 0.01447976538889823,
+      "delta_mINP_vs_IRRA_pp": 0.4213120922929363
+    },
+    {
+      "method": "no_support",
+      "selected_alpha": 1.0,
+      "seeds": 3,
+      "R1_mean": 57.843455667424486,
+      "R1_sd": 0.05855068651289041,
+      "delta_R1_vs_IRRA_pp": 1.0068203962325342,
+      "R5_mean": 79.30605174840316,
+      "R5_sd": 0.06562929334731189,
+      "delta_R5_vs_IRRA_pp": 0.8390169968604511,
+      "R10_mean": 86.4187506766266,
+      "R10_sd": 0.08173470212484073,
+      "delta_R10_vs_IRRA_pp": 0.3680848760420048,
+      "mAP_mean": 53.67509946899011,
+      "mAP_sd": 0.018091193306263468,
+      "delta_mAP_vs_IRRA_pp": 0.636353019008979,
+      "mINP_mean": 38.64422655898884,
+      "mINP_sd": 0.03141303855255516,
+      "delta_mINP_vs_IRRA_pp": 0.43930297512520866
+    },
+    {
+      "method": "selected_support",
+      "selected_alpha": 1.0,
+      "seeds": 3,
+      "R1_mean": 57.83804265454152,
+      "R1_sd": 0.09233908254428926,
+      "delta_R1_vs_IRRA_pp": 1.0014073833495658,
+      "R5_mean": 79.28439969687128,
+      "R5_sd": 0.0801052754517125,
+      "delta_R5_vs_IRRA_pp": 0.8173649453285634,
+      "R10_mean": 86.4187506766266,
+      "R10_sd": 0.11405925898941481,
+      "delta_R10_vs_IRRA_pp": 0.3680848760420048,
+      "mAP_mean": 53.67229098365811,
+      "mAP_sd": 0.01414375902203949,
+      "delta_mAP_vs_IRRA_pp": 0.6335445336769752,
+      "mINP_mean": 38.64341347731325,
+      "mINP_sd": 0.015561430166336902,
+      "delta_mINP_vs_IRRA_pp": 0.43848989344962064
+    }
+  ],
+  "selector_identity_holdout": {
+    "n_support_pairs": 12640,
+    "class_counts": [
+      4968,
+      940,
+      6732
+    ],
+    "dual_objective_harmful_recall_useful_recall_harmonic": 0.6425175378863436,
+    "both_classes_present": true,
+    "confusion_rows_true_cols_pred": [
+      [
+        2463,
+        1196,
+        1309
+      ],
+      [
+        64,
+        349,
+        527
+      ],
+      [
+        179,
+        409,
+        6144
+      ]
+    ],
+    "recall_harmful_uncertain_useful": [
+      0.49577294685990336,
+      0.37127659574468086,
+      0.9126559714795008
+    ],
+    "precision_harmful_uncertain_useful": [
+      0.9101995565410199,
+      0.17860798362333674,
+      0.7699248120300752
+    ],
+    "macro_recall_present": 0.5932351713613616,
+    "reject_harmful_rate": 0.38768115942028986,
+    "accept_useful_rate": 0.8374925727866904,
+    "accepted_fraction_all": 0.5454113924050633,
+    "rejected_fraction_all": 0.15830696202531647,
+    "unresolved_fraction_all": 0.2962816455696203,
+    "accepted_true_useful_precision": 0.8178125906585436,
+    "accepted_proxy_margin_mean": 0.04724530875682831,
+    "rejected_proxy_margin_mean": -0.04613318294286728,
+    "warning": "Labels are image-and-hard-negative based utility PROXIES, not verified natural-language truth. Identity-assisted triage is ORACLE diagnostics; no Val PID use in inference."
+  },
+  "no_val_pid_in_scoring": true,
+  "limitations": [
+    "Support truth/usefulness is defined by frozen IRRA ranking-utility proxy, not natural language factual labels.",
+    "The trained student cannot select a support that is absent at inference; it only transfers supervision from training-time selected support.",
+    "Heldout TRAIN PID used to lock alpha; not independent test of hyperparameter generalization.",
+    "Validation repeatedly used in prior experiments; all alpha sweep results there are descriptive, never use Val optimum to make claims.",
+    "Both students have identical architecture and same training protocol; no_support controls extra optimization but not all conceivable regularization mechanisms.",
+    "Scoring is original IRRA fixed Top-K full-gallery reranking; not independent-index vector retrieval."
+  ],
+  "success_criteria": [
+    "Both useful acceptance and harmful rejection must be nondegenerate on unseen TRAIN identities",
+    "selected_support at locked alpha must exceed original IRRA, EXP07 Warmup (alpha=1), and no_support across seeds",
+    "R1 and mAP, paired repairs and harms are both analyzed; no success claim from one seed or Val-tuned alpha"
+  ],
+  "research_objectives": [
+    "1: reliable multi-text complementarity",
+    "2: reliable multi-view image complementarity",
+    "3: strict positive joint fusion"
+  ]
+}

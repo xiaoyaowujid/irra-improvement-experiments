@@ -1,0 +1,206 @@
+{
+  "version": "exp21_v1_listwise_group_set_competition",
+  "objective": "无PID查询->同身份多图多训练描述集合的归属（第一技术难点）",
+  "best_checkpoint_sha256": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "official_val_r1_verify_only": 66.43390711269893,
+  "n_fit_PID": 1760,
+  "n_holdout_PID": 440,
+  "n_query": 542,
+  "n_B_images": 637,
+  "n_B_train_descriptions": 1274,
+  "source_exp19": "G:\\PyCharmProjects\\IRRA\\IRRA-main\\图文双向互补实验\\实验19_全图库双层身份关联与文本归属_20261021_205519_053300",
+  "visual_groups": {
+    "n_images": 637,
+    "n_groups": 502,
+    "n_multiview_groups": 124,
+    "n_pure_multiview_groups": 119,
+    "n_impure_groups": 5,
+    "n_same_pid_pairs": 226,
+    "n_proposed_pairs": 151,
+    "n_correct_pairs": 145,
+    "pair_precision": 0.9602649006622517,
+    "pair_recall": 0.6415929203539823,
+    "whole_group_purity": 0.9900398406374502
+  },
+  "history_replayed_all_542": true,
+  "old_score_max_abs_error": 0.0,
+  "holdout_methods": [
+    {
+      "method": "top1",
+      "n_queries": 542,
+      "n_correct_source": 409,
+      "source_accuracy": 0.7546125461254612,
+      "repairs_from_top1": 0,
+      "harms_to_top1": 0,
+      "net_repairs": 0
+    },
+    {
+      "method": "old19",
+      "n_queries": 542,
+      "n_correct_source": 413,
+      "source_accuracy": 0.7619926199261993,
+      "repairs_from_top1": 19,
+      "harms_to_top1": 15,
+      "net_repairs": 4
+    },
+    {
+      "method": "listwise_base",
+      "n_queries": 542,
+      "n_correct_source": 408,
+      "source_accuracy": 0.7527675276752768,
+      "repairs_from_top1": 13,
+      "harms_to_top1": 14,
+      "net_repairs": -1,
+      "chosen_multiview_count": 240,
+      "chosen_correct_multiview_count": 190,
+      "accepted_90": 368,
+      "accepted_precision_90": 0.8885869565217391,
+      "fallback_accuracy_90": 0.7527675276752768,
+      "repairs_90": 2,
+      "harms_90": 3,
+      "accepted_95": 274,
+      "accepted_precision_95": 0.9452554744525548,
+      "fallback_accuracy_95": 0.7527675276752768,
+      "repairs_95": 0,
+      "harms_95": 1
+    },
+    {
+      "method": "listwise_set",
+      "n_queries": 542,
+      "n_correct_source": 411,
+      "source_accuracy": 0.7583025830258303,
+      "repairs_from_top1": 16,
+      "harms_to_top1": 14,
+      "net_repairs": 2,
+      "chosen_multiview_count": 238,
+      "chosen_correct_multiview_count": 191,
+      "accepted_90": 362,
+      "accepted_precision_90": 0.9005524861878453,
+      "fallback_accuracy_90": 0.7527675276752768,
+      "repairs_90": 3,
+      "harms_90": 4,
+      "accepted_95": 279,
+      "accepted_precision_95": 0.942652329749104,
+      "fallback_accuracy_95": 0.7546125461254612,
+      "repairs_95": 0,
+      "harms_95": 0
+    }
+  ],
+  "fit_cv_cutoffs": {
+    "listwise_base": {
+      "90": {
+        "threshold": 0.5187875169986864,
+        "n_cv_accepted": 692,
+        "cv_precision": 0.9002890173410405,
+        "cv_coverage": 0.6666666666666666,
+        "target_met": true
+      },
+      "95": {
+        "threshold": 0.698666408467233,
+        "n_cv_accepted": 496,
+        "cv_precision": 0.9516129032258065,
+        "cv_coverage": 0.47784200385356457,
+        "target_met": true
+      }
+    },
+    "listwise_set": {
+      "90": {
+        "threshold": 0.5309621873330342,
+        "n_cv_accepted": 690,
+        "cv_precision": 0.9,
+        "cv_coverage": 0.6647398843930635,
+        "target_met": true
+      },
+      "95": {
+        "threshold": 0.6881416527736074,
+        "n_cv_accepted": 520,
+        "cv_precision": 0.95,
+        "cv_coverage": 0.5009633911368016,
+        "target_met": true
+      }
+    }
+  },
+  "bootstrap": {
+    "set_minus_old19": {
+      "observed_delta_pp": -0.36900369450449944,
+      "pid_cluster_bootstrap_95ci_pp": [
+        -4.428044334053993,
+        3.505535051226616
+      ]
+    },
+    "set_minus_base": {
+      "observed_delta_pp": 0.5535055417567492,
+      "pid_cluster_bootstrap_95ci_pp": [
+        -3.505535051226616,
+        4.428044334053993
+      ]
+    },
+    "set_minus_top1": {
+      "observed_delta_pp": 0.36900369450449944,
+      "pid_cluster_bootstrap_95ci_pp": [
+        -3.6900367587804794,
+        4.2435422539711
+      ]
+    }
+  },
+  "feature_names_base": [
+    "max_img",
+    "mean_img",
+    "top2_img",
+    "max_txt",
+    "mean_txt",
+    "top2_txt",
+    "img_range",
+    "txt_range",
+    "log_sources",
+    "cohesion",
+    "img_caption_consistency",
+    "group_in_Top16_frac",
+    "base_competitor_gap"
+  ],
+  "feature_names_multidescription": [
+    "max_img",
+    "mean_img",
+    "top2_img",
+    "max_txt",
+    "mean_txt",
+    "top2_txt",
+    "img_range",
+    "txt_range",
+    "log_sources",
+    "cohesion",
+    "img_caption_consistency",
+    "group_in_Top16_frac",
+    "base_competitor_gap",
+    "is_singleton",
+    "has_two_distinct_images",
+    "joint_best",
+    "joint_mean",
+    "joint_second_if_exists",
+    "joint_min_if_exists",
+    "joint_top_two_min_if_exists",
+    "distinct_view_support_fraction",
+    "distinct_view_support_gap",
+    "text_embedding_diversity",
+    "img_caption_joint_agreement",
+    "joint_competitor_gap",
+    "text_competitor_gap",
+    "image_competitor_gap",
+    "n_distinct_captions_log"
+  ],
+  "no_holdout_pid_for_selection": true,
+  "A_B_C_image_disjoint": true,
+  "support_description_source": "original TRAIN captions only",
+  "candidate_pool_unchanged": true,
+  "no_val_test_caption_support": true,
+  "no_text_filter_or_fusion": true,
+  "warnings": [
+    "Holdout identities were seen by original frozen IRRA during its training.",
+    "A pure image group may belong to the wrong query identity.",
+    "This tests provenance only, not actual multi-text complementarity or official Val retrieval.",
+    "Listwise confidence calibration from fit CV is NOT a guarantee on unseen identities.",
+    "Single-image groups have no fabricated second-view evidence.",
+    "Original EXP19 features remain in both variants for controlled comparison.",
+    "Without a legally available image-caption source for Val/Test, this is not a deployable official benchmark."
+  ]
+}

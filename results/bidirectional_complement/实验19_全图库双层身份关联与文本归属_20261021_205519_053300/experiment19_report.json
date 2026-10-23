@@ -1,0 +1,255 @@
+{
+  "version": "exp19_v1_group_link_and_query_attribution_cvfit_only",
+  "best_checkpoint_sha256": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "official_best_val_R1_verify_only": 66.43390711269893,
+  "source_exp12": "G:\\PyCharmProjects\\IRRA\\IRRA-main\\图文双向互补实验\\实验12_最佳IRRA同身份文本互补迁移_20261021_164528",
+  "source_exp16": "G:\\PyCharmProjects\\IRRA\\IRRA-main\\图文双向互补实验\\实验16_Top16多图与合法文本来源_20261021_191919",
+  "exp16_threshold_fit_metadata": {
+    "threshold": 0.7837574481964111,
+    "training_pid_only": true,
+    "fit_queries": 1800,
+    "unique_top16_image_pairs": 140068,
+    "positive_pairs": 3571,
+    "negative_pairs": 136497,
+    "target_pair_precision": 0.95,
+    "selected_pairs": 2544,
+    "fit_pair_precision": 0.9500786163522013,
+    "fit_pair_recall": 0.6768412209465136,
+    "status": "calibrated",
+    "calibration_gallery_pids": 1000,
+    "calibration_gallery_images": 3036
+  },
+  "no_IRRA_training": true,
+  "only_lightweight_group_attribution_model_is_fitted": true,
+  "train_only_training_captions_used_as_B_sources": true,
+  "val_test_gallery_caption_support": false,
+  "groups_found_globally_not_seeded_at_Top16": true,
+  "Top16_only_auxiliary_diagnostic": true,
+  "feature_names": [
+    "max_img",
+    "mean_img",
+    "top2_img",
+    "max_txt",
+    "mean_txt",
+    "top2_txt",
+    "img_range",
+    "txt_range",
+    "log_sources",
+    "cohesion",
+    "img_caption_consistency",
+    "group_in_Top16_frac"
+  ],
+  "target_fit_cv_precision": 0.95,
+  "fit_and_holdout_pid_disjoint": true,
+  "A_B_C_image_disjoint": true,
+  "warnings": [
+    "These numbers concern provenance discovery, NOT real text set fusion or official Validation R1.",
+    "Frozen best IRRA already trained on TRAIN holdout identities. This tests matcher generalization, not the encoder's unseen-ID retrieval.",
+    "A visual group may be pure while belonging to the WRONG query identity.",
+    "Holdout PID is used ONLY for post-hoc scoring; teacher labels used ONLY among disjoint FIT PIDs.",
+    "The group-linking threshold is inherited from EXP16, not tuned on holdout.",
+    "The query-group selector uses original TRAIN image captions, which are unavailable as Val gallery captions under the standard protocol.",
+    "CV-selected abstention cutoff is not a guarantee of precision on unseen holdout identities.",
+    "Group features built from whole B gallery, no test C image nor label used in decisions.",
+    "No multi-text information selection, fusion, or image-feature fusion is claimed in this experiment."
+  ],
+  "fit": {
+    "n_fit_PID": 1760,
+    "n_folds": 4,
+    "fit_fold_graph": [
+      {
+        "fold": 0,
+        "n_PID": 440,
+        "n_support_B_images": 663,
+        "n_fit_A_queries": 262,
+        "n_fit_positive_in_candidates": 262,
+        "n_images": 663,
+        "n_groups": 511,
+        "n_multiview_groups": 132,
+        "n_pure_multiview_groups": 132,
+        "n_impure_groups": 0,
+        "n_same_pid_pairs": 294,
+        "n_proposed_pairs": 185,
+        "n_correct_pairs": 185,
+        "pair_precision": 1.0,
+        "pair_recall": 0.6292517006802721,
+        "whole_group_purity": 1.0
+      },
+      {
+        "fold": 1,
+        "n_PID": 440,
+        "n_support_B_images": 662,
+        "n_fit_A_queries": 265,
+        "n_fit_positive_in_candidates": 258,
+        "n_images": 662,
+        "n_groups": 525,
+        "n_multiview_groups": 124,
+        "n_pure_multiview_groups": 121,
+        "n_impure_groups": 3,
+        "n_same_pid_pairs": 300,
+        "n_proposed_pairs": 152,
+        "n_correct_pairs": 147,
+        "pair_precision": 0.9671052631578947,
+        "pair_recall": 0.49,
+        "whole_group_purity": 0.9942857142857143
+      },
+      {
+        "fold": 2,
+        "n_PID": 440,
+        "n_support_B_images": 648,
+        "n_fit_A_queries": 255,
+        "n_fit_positive_in_candidates": 251,
+        "n_images": 648,
+        "n_groups": 513,
+        "n_multiview_groups": 120,
+        "n_pure_multiview_groups": 116,
+        "n_impure_groups": 4,
+        "n_same_pid_pairs": 301,
+        "n_proposed_pairs": 150,
+        "n_correct_pairs": 145,
+        "pair_precision": 0.9666666666666667,
+        "pair_recall": 0.48172757475083056,
+        "whole_group_purity": 0.9922027290448343
+      },
+      {
+        "fold": 3,
+        "n_PID": 440,
+        "n_support_B_images": 629,
+        "n_fit_A_queries": 256,
+        "n_fit_positive_in_candidates": 253,
+        "n_images": 629,
+        "n_groups": 497,
+        "n_multiview_groups": 115,
+        "n_pure_multiview_groups": 111,
+        "n_impure_groups": 4,
+        "n_same_pid_pairs": 266,
+        "n_proposed_pairs": 157,
+        "n_correct_pairs": 150,
+        "pair_precision": 0.9554140127388535,
+        "pair_recall": 0.5639097744360902,
+        "whole_group_purity": 0.9919517102615694
+      }
+    ],
+    "crossfit_queries": 1038,
+    "CV_target_precision": 0.95,
+    "threshold_calibration": {
+      "threshold": 0.9929895646731793,
+      "n_accepted_cv": 87,
+      "cv_precision": 0.9540229885057471,
+      "cv_coverage": 0.0838150289017341,
+      "target_met_on_fit": true,
+      "desired_precision": 0.95
+    }
+  },
+  "holdout": {
+    "n_hold_PID": 440,
+    "n_B_images": 637,
+    "n_B_train_captions": 1274,
+    "n_C_independent_images_unused_for_decisions": 440,
+    "n_A_query_images": 271,
+    "n_query_texts": 542,
+    "global_visual_graph": {
+      "n_images": 637,
+      "n_groups": 502,
+      "n_multiview_groups": 124,
+      "n_pure_multiview_groups": 119,
+      "n_impure_groups": 5,
+      "n_same_pid_pairs": 226,
+      "n_proposed_pairs": 151,
+      "n_correct_pairs": 145,
+      "pair_precision": 0.9602649006622517,
+      "pair_recall": 0.6415929203539823,
+      "whole_group_purity": 0.9900398406374502
+    },
+    "n_queries_correct_B_image_outside_Top16": 34,
+    "n_queries_true_group_in_global_B": 540,
+    "n_queries_true_group_in_candidate_pool": 536,
+    "n_queries_no_correct_B_source": 0,
+    "n_queries_selected_wrong_group": 1,
+    "n_queries_abstained": 486
+  },
+  "methods": [
+    {
+      "method": "single_top1",
+      "n_queries": 542,
+      "n_accepted": 542,
+      "accept_coverage": 1.0,
+      "identity_precision_when_accepted": 0.7546125461254612,
+      "correct_identity_support_recall_per_query": 0.7546125461254612,
+      "n_accepted_with_2plus_images": 0,
+      "multiview_identity_precision": null,
+      "n_accepted_groups_with_B_image_outside_top16": 0,
+      "n_accepted_correct_identity_with_B_image_outside_top16": 0,
+      "n_queries_with_2plus_training_captions_from_2plus_images": 0
+    },
+    {
+      "method": "group_static",
+      "n_queries": 542,
+      "n_accepted": 542,
+      "accept_coverage": 1.0,
+      "identity_precision_when_accepted": 0.7121771217712177,
+      "correct_identity_support_recall_per_query": 0.7121771217712177,
+      "n_accepted_with_2plus_images": 243,
+      "multiview_identity_precision": 0.7695473251028807,
+      "n_accepted_groups_with_B_image_outside_top16": 6,
+      "n_accepted_correct_identity_with_B_image_outside_top16": 1,
+      "n_queries_with_2plus_training_captions_from_2plus_images": 243
+    },
+    {
+      "method": "group_fit_all",
+      "n_queries": 542,
+      "n_accepted": 542,
+      "accept_coverage": 1.0,
+      "identity_precision_when_accepted": 0.7619926199261993,
+      "correct_identity_support_recall_per_query": 0.7619926199261993,
+      "n_accepted_with_2plus_images": 227,
+      "multiview_identity_precision": 0.8237885462555066,
+      "n_accepted_groups_with_B_image_outside_top16": 2,
+      "n_accepted_correct_identity_with_B_image_outside_top16": 0,
+      "n_queries_with_2plus_training_captions_from_2plus_images": 227
+    },
+    {
+      "method": "group_fit_with_abstention",
+      "n_queries": 542,
+      "n_accepted": 56,
+      "accept_coverage": 0.1033210332103321,
+      "identity_precision_when_accepted": 0.9821428571428571,
+      "correct_identity_support_recall_per_query": 0.1014760147601476,
+      "n_accepted_with_2plus_images": 39,
+      "multiview_identity_precision": 1.0,
+      "n_accepted_groups_with_B_image_outside_top16": 0,
+      "n_accepted_correct_identity_with_B_image_outside_top16": 0,
+      "n_queries_with_2plus_training_captions_from_2plus_images": 39
+    }
+  ],
+  "bootstrap": {
+    "single_top1": {
+      "correct_support_per_query": 0.7546125461254612,
+      "pid_cluster_95ci": [
+        0.7158671586715867,
+        0.7933579335793358
+      ]
+    },
+    "group_static": {
+      "correct_support_per_query": 0.7121771217712177,
+      "pid_cluster_95ci": [
+        0.6697416974169742,
+        0.7583025830258303
+      ]
+    },
+    "group_fit_all": {
+      "correct_support_per_query": 0.7619926199261993,
+      "pid_cluster_95ci": [
+        0.7214022140221402,
+        0.8026291512915127
+      ]
+    },
+    "group_fit_with_abstention": {
+      "correct_support_per_query": 0.1014760147601476,
+      "pid_cluster_95ci": [
+        0.07380073800738007,
+        0.13099630996309963
+      ]
+    }
+  }
+}

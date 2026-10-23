@@ -1,0 +1,5 @@
+﻿method,n_queries,n_correct_source,source_accuracy,repairs_from_top1,harms_to_top1,net_repairs
+top1,542,409,0.7546125461254612,0,0,0
+old19,542,413,0.7619926199261993,19,15,4
+listwise_base,542,408,0.7527675276752768,13,14,-1
+listwise_set,542,411,0.7583025830258303,16,14,2

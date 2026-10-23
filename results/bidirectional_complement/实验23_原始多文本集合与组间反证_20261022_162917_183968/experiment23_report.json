@@ -1,0 +1,431 @@
+{
+  "version": "exp23_v1_raw_caption_group_rival",
+  "objective": "无PID准确获取同身份多个来源图像的多文本描述集合",
+  "frozen_best_sha": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "official_val_r1_audit_only": 66.43390711269893,
+  "fit_pids": 1760,
+  "holdout_pids": 440,
+  "holdout_queries": 542,
+  "graph": {
+    "n_images": 637,
+    "n_groups": 502,
+    "n_multiview_groups": 124,
+    "n_pure_multiview_groups": 119,
+    "n_impure_groups": 5,
+    "n_same_pid_pairs": 226,
+    "n_proposed_pairs": 151,
+    "n_correct_pairs": 145,
+    "pair_precision": 0.9602649006622517,
+    "pair_recall": 0.6415929203539823,
+    "whole_group_purity": 0.9900398406374502
+  },
+  "history_replayed": true,
+  "max_old19_score_error": 0.0,
+  "mode_definition": {
+    "set": "逐条文本与自身图像的查询条件注意力聚合",
+    "rival": "同样文本集合编码，再加竞争组间MHA反证"
+  },
+  "fixed_caption_limit_per_group": 6,
+  "source_images_max": 3,
+  "fit_folds": [
+    {
+      "n_images": 663,
+      "n_groups": 511,
+      "n_multiview_groups": 132,
+      "n_pure_multiview_groups": 132,
+      "n_impure_groups": 0,
+      "n_same_pid_pairs": 294,
+      "n_proposed_pairs": 185,
+      "n_correct_pairs": 185,
+      "pair_precision": 1.0,
+      "pair_recall": 0.6292517006802721,
+      "whole_group_purity": 1.0,
+      "fold": 0,
+      "fit_pid": 440,
+      "training_queries": 262,
+      "positive_in_candidate_pool": 262
+    },
+    {
+      "n_images": 662,
+      "n_groups": 525,
+      "n_multiview_groups": 124,
+      "n_pure_multiview_groups": 121,
+      "n_impure_groups": 3,
+      "n_same_pid_pairs": 300,
+      "n_proposed_pairs": 152,
+      "n_correct_pairs": 147,
+      "pair_precision": 0.9671052631578947,
+      "pair_recall": 0.49,
+      "whole_group_purity": 0.9942857142857143,
+      "fold": 1,
+      "fit_pid": 440,
+      "training_queries": 265,
+      "positive_in_candidate_pool": 258
+    },
+    {
+      "n_images": 648,
+      "n_groups": 513,
+      "n_multiview_groups": 120,
+      "n_pure_multiview_groups": 116,
+      "n_impure_groups": 4,
+      "n_same_pid_pairs": 301,
+      "n_proposed_pairs": 150,
+      "n_correct_pairs": 145,
+      "pair_precision": 0.9666666666666667,
+      "pair_recall": 0.48172757475083056,
+      "whole_group_purity": 0.9922027290448343,
+      "fold": 2,
+      "fit_pid": 440,
+      "training_queries": 255,
+      "positive_in_candidate_pool": 251
+    },
+    {
+      "n_images": 629,
+      "n_groups": 497,
+      "n_multiview_groups": 115,
+      "n_pure_multiview_groups": 111,
+      "n_impure_groups": 4,
+      "n_same_pid_pairs": 266,
+      "n_proposed_pairs": 157,
+      "n_correct_pairs": 150,
+      "pair_precision": 0.9554140127388535,
+      "pair_recall": 0.5639097744360902,
+      "whole_group_purity": 0.9919517102615694,
+      "fold": 3,
+      "fit_pid": 440,
+      "training_queries": 256,
+      "positive_in_candidate_pool": 253
+    }
+  ],
+  "methods": [
+    {
+      "method": "original_top1",
+      "queries": 542,
+      "correct": 409,
+      "accuracy_pct": 75.46125461254613,
+      "fix_original_top1": 0,
+      "harm_original_top1": 0,
+      "net_fix": 0
+    },
+    {
+      "method": "exp19",
+      "queries": 542,
+      "correct": 413,
+      "accuracy_pct": 76.19926199261992,
+      "fix_original_top1": 19,
+      "harm_original_top1": 15,
+      "net_fix": 4
+    },
+    {
+      "method": "exp21",
+      "queries": 542,
+      "correct": 411,
+      "accuracy_pct": 75.83025830258303,
+      "fix_original_top1": 16,
+      "harm_original_top1": 14,
+      "net_fix": 2
+    },
+    {
+      "method": "set_s17",
+      "queries": 542,
+      "correct": 369,
+      "accuracy_pct": 68.08118081180811,
+      "fix_original_top1": 22,
+      "harm_original_top1": 62,
+      "net_fix": -40,
+      "multiview_correct_sources": 179,
+      "accepted_90": 249,
+      "accepted_precision_90": 0.9397590361445783,
+      "fallback_accuracy_90": 76.01476014760148,
+      "accepted_95": 158,
+      "accepted_precision_95": 0.9620253164556962,
+      "fallback_accuracy_95": 75.46125461254613
+    },
+    {
+      "method": "rival_s17",
+      "queries": 542,
+      "correct": 374,
+      "accuracy_pct": 69.00369003690037,
+      "fix_original_top1": 27,
+      "harm_original_top1": 62,
+      "net_fix": -35,
+      "multiview_correct_sources": 186,
+      "accepted_90": 275,
+      "accepted_precision_90": 0.8836363636363637,
+      "fallback_accuracy_90": 75.46125461254613,
+      "accepted_95": 194,
+      "accepted_precision_95": 0.9278350515463918,
+      "fallback_accuracy_95": 75.46125461254613
+    },
+    {
+      "method": "set_s29",
+      "queries": 542,
+      "correct": 377,
+      "accuracy_pct": 69.55719557195572,
+      "fix_original_top1": 27,
+      "harm_original_top1": 59,
+      "net_fix": -32,
+      "multiview_correct_sources": 184,
+      "accepted_90": 284,
+      "accepted_precision_90": 0.9084507042253521,
+      "fallback_accuracy_90": 75.83025830258303,
+      "accepted_95": 198,
+      "accepted_precision_95": 0.9343434343434344,
+      "fallback_accuracy_95": 75.46125461254613
+    },
+    {
+      "method": "rival_s29",
+      "queries": 542,
+      "correct": 367,
+      "accuracy_pct": 67.71217712177122,
+      "fix_original_top1": 27,
+      "harm_original_top1": 69,
+      "net_fix": -42,
+      "multiview_correct_sources": 174,
+      "accepted_90": 288,
+      "accepted_precision_90": 0.9027777777777778,
+      "fallback_accuracy_90": 75.46125461254613,
+      "accepted_95": 182,
+      "accepted_precision_95": 0.945054945054945,
+      "fallback_accuracy_95": 75.27675276752768
+    },
+    {
+      "method": "set_s43",
+      "queries": 542,
+      "correct": 366,
+      "accuracy_pct": 67.52767527675276,
+      "fix_original_top1": 22,
+      "harm_original_top1": 65,
+      "net_fix": -43,
+      "multiview_correct_sources": 180,
+      "accepted_90": 249,
+      "accepted_precision_90": 0.927710843373494,
+      "fallback_accuracy_90": 75.64575645756457,
+      "accepted_95": 158,
+      "accepted_precision_95": 0.9683544303797469,
+      "fallback_accuracy_95": 75.46125461254613
+    },
+    {
+      "method": "rival_s43",
+      "queries": 542,
+      "correct": 392,
+      "accuracy_pct": 72.32472324723247,
+      "fix_original_top1": 32,
+      "harm_original_top1": 49,
+      "net_fix": -17,
+      "multiview_correct_sources": 188,
+      "accepted_90": 242,
+      "accepted_precision_90": 0.9256198347107438,
+      "fallback_accuracy_90": 75.83025830258303,
+      "accepted_95": 174,
+      "accepted_precision_95": 0.9482758620689655,
+      "fallback_accuracy_95": 75.83025830258303
+    }
+  ],
+  "bootstrap": {
+    "set_s17_minus_exp19": {
+      "delta_pp": -8.118081092834473,
+      "pid_cluster_95ci_pp": [
+        -11.254612356424332,
+        -4.612546041607857
+      ]
+    },
+    "rival_s17_minus_exp19": {
+      "delta_pp": -7.195571810007095,
+      "pid_cluster_95ci_pp": [
+        -10.613468922674656,
+        -3.6900367587804794
+      ]
+    },
+    "rival_s17_minus_set": {
+      "delta_pp": 0.9225091896951199,
+      "pid_cluster_95ci_pp": [
+        -2.398524060845375,
+        4.428044334053993
+      ]
+    },
+    "set_s29_minus_exp19": {
+      "delta_pp": -6.642066687345505,
+      "pid_cluster_95ci_pp": [
+        -9.963099658489227,
+        -3.505535051226616
+      ]
+    },
+    "rival_s29_minus_exp19": {
+      "delta_pp": -8.4870845079422,
+      "pid_cluster_95ci_pp": [
+        -11.992619931697845,
+        -4.981549829244614
+      ]
+    },
+    "rival_s29_minus_set": {
+      "delta_pp": -1.8450183793902397,
+      "pid_cluster_95ci_pp": [
+        -4.709409633651376,
+        1.1070110835134983
+      ]
+    },
+    "set_s43_minus_exp19": {
+      "delta_pp": -8.671586960554123,
+      "pid_cluster_95ci_pp": [
+        -12.177121639251709,
+        -5.166051536798477
+      ]
+    },
+    "rival_s43_minus_exp19": {
+      "delta_pp": -3.874538838863373,
+      "pid_cluster_95ci_pp": [
+        -7.564575970172882,
+        -0.5535055417567492
+      ]
+    },
+    "rival_s43_minus_set": {
+      "delta_pp": 4.79704812169075,
+      "pid_cluster_95ci_pp": [
+        1.8450183793902397,
+        7.749077677726746
+      ]
+    }
+  },
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 14,
+  "crossval_thresholds": {
+    "17": {
+      "set": {
+        "90": {
+          "threshold": 0.34008222818374634,
+          "n_cv_accepted": 386,
+          "cv_precision": 0.9015544041450777,
+          "n_cv_queries": 1038
+        },
+        "95": {
+          "threshold": 0.4526083171367645,
+          "n_cv_accepted": 226,
+          "cv_precision": 0.9513274336283186,
+          "n_cv_queries": 1038
+        }
+      },
+      "rival": {
+        "90": {
+          "threshold": 0.32395634055137634,
+          "n_cv_accepted": 470,
+          "cv_precision": 0.9,
+          "n_cv_queries": 1038
+        },
+        "95": {
+          "threshold": 0.419479101896286,
+          "n_cv_accepted": 320,
+          "cv_precision": 0.95,
+          "n_cv_queries": 1038
+        }
+      }
+    },
+    "29": {
+      "set": {
+        "90": {
+          "threshold": 0.28661981225013733,
+          "n_cv_accepted": 501,
+          "cv_precision": 0.9001996007984032,
+          "n_cv_queries": 1038
+        },
+        "95": {
+          "threshold": 0.38207221031188965,
+          "n_cv_accepted": 327,
+          "cv_precision": 0.9510703363914373,
+          "n_cv_queries": 1038
+        }
+      },
+      "rival": {
+        "90": {
+          "threshold": 0.30239173769950867,
+          "n_cv_accepted": 470,
+          "cv_precision": 0.9,
+          "n_cv_queries": 1038
+        },
+        "95": {
+          "threshold": 0.4088056683540344,
+          "n_cv_accepted": 285,
+          "cv_precision": 0.9508771929824561,
+          "n_cv_queries": 1038
+        }
+      }
+    },
+    "43": {
+      "set": {
+        "90": {
+          "threshold": 0.3274661600589752,
+          "n_cv_accepted": 424,
+          "cv_precision": 0.9009433962264151,
+          "n_cv_queries": 1038
+        },
+        "95": {
+          "threshold": 0.4434802830219269,
+          "n_cv_accepted": 233,
+          "cv_precision": 0.9527896995708155,
+          "n_cv_queries": 1038
+        }
+      },
+      "rival": {
+        "90": {
+          "threshold": 0.34068500995635986,
+          "n_cv_accepted": 466,
+          "cv_precision": 0.9012875536480687,
+          "n_cv_queries": 1038
+        },
+        "95": {
+          "threshold": 0.4296922981739044,
+          "n_cv_accepted": 323,
+          "cv_precision": 0.9504643962848297,
+          "n_cv_queries": 1038
+        }
+      }
+    }
+  },
+  "training_losses": {
+    "17": {
+      "set": [
+        1.8731286246329546,
+        1.414675749372691
+      ],
+      "rival": [
+        1.8715558238327503,
+        1.3616311266086996
+      ]
+    },
+    "29": {
+      "set": [
+        1.8713791258633137,
+        1.3986931219696999
+      ],
+      "rival": [
+        1.8697647461667657,
+        1.382691752165556
+      ]
+    },
+    "43": {
+      "set": [
+        1.870198487304151,
+        1.4307168503291905
+      ],
+      "rival": [
+        1.8720618467777967,
+        1.4990371339954436
+      ]
+    }
+  },
+  "constraints": [
+    "仅Train的B图像及其原始caption参与集合构造",
+    "候选池与实验19/21相同、全图库不限Top16",
+    "真实PID仅用于训练监督/事后审计，不能输入模型或候选构建",
+    "A/B/C图像严格互斥",
+    "原冻结IRRA模型原始训练期间见过这些Train身份，非真正新身份泛化",
+    "独立C图像不进入身份组评分",
+    "不读取Val/Test图库人工描述",
+    "官方Val检索成绩未经新方案修改；本轮不评价信息真实性/融合收益",
+    "输入是每条caption 512d全局特征，不是77个token的细粒度特征"
+  ]
+}

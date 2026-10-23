@@ -1,0 +1,201 @@
+{
+  "experiment": "15",
+  "question": "Can source-only selector learn beneficial/harmful same-PID text complementarity from fit-ID full-gallery retrieval utility?",
+  "source_exp12": "G:\\PyCharmProjects\\IRRA\\IRRA-main\\图文双向互补实验\\实验12_最佳IRRA同身份文本互补迁移_20261021_164528",
+  "best_IRRA_SHA256": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "train_PID_count": 1760,
+  "holdout_PID_count": 440,
+  "fitting_diagnostics": {
+    "n_fit_cases": 7914,
+    "n_fit_PID": 1038,
+    "fit_class_counts": {
+      "harmful": 261,
+      "neutral": 4364,
+      "beneficial": 3289
+    },
+    "fit_accepted": 2925,
+    "fit_harmful_rejected": 209,
+    "fit_beneficial_accepted": 1970,
+    "fit_positive_prob_mean": 0.3490742918162038,
+    "WARNING": "TRAIN identity fitted metrics only; not unbiased test."
+  },
+  "exp12_replay": {
+    "matched": true,
+    "n": 2020,
+    "original_accepted": 714
+  },
+  "holdout_eligible_cases": 2020,
+  "holdout_eligible_PID": 271,
+  "holdout_gallery_images": 1348,
+  "holdout_utility_label_counts": {
+    "harmful": 75,
+    "neutral": 1126,
+    "beneficial": 819
+  },
+  "method_metrics": [
+    {
+      "method": "T1_only",
+      "n_cases": 2020,
+      "unique_pid": 271,
+      "accepted_n": 0,
+      "accepted_pct": 0.0,
+      "R1_pct": 70.14851485148515,
+      "R5_pct": 87.62376237623762,
+      "R10_pct": 93.01980198019803,
+      "mAP_pct": 71.87932235403962,
+      "mINP_pct": 65.689810771017,
+      "mean_delta_AP_from_T1_pp": 0.0
+    },
+    {
+      "method": "All_T2",
+      "n_cases": 2020,
+      "unique_pid": 271,
+      "accepted_n": 2020,
+      "accepted_pct": 100.0,
+      "R1_pct": 83.06930693069306,
+      "R5_pct": 94.95049504950495,
+      "R10_pct": 97.67326732673267,
+      "mAP_pct": 83.17520110092721,
+      "mINP_pct": 77.9588350654191,
+      "mean_delta_AP_from_T1_pp": 11.295878746887599
+    },
+    {
+      "method": "Original_EXP12",
+      "n_cases": 2020,
+      "unique_pid": 271,
+      "accepted_n": 714,
+      "accepted_pct": 35.34653465346535,
+      "R1_pct": 78.36633663366337,
+      "R5_pct": 92.37623762376238,
+      "R10_pct": 96.08910891089108,
+      "mAP_pct": 78.90723200897172,
+      "mINP_pct": 73.13449617394787,
+      "mean_delta_AP_from_T1_pp": 7.027909654932104
+    },
+    {
+      "method": "EXP15_utility_selector",
+      "n_cases": 2020,
+      "unique_pid": 271,
+      "accepted_n": 735,
+      "accepted_pct": 36.386138613861384,
+      "R1_pct": 79.10891089108911,
+      "R5_pct": 93.51485148514853,
+      "R10_pct": 96.78217821782178,
+      "mAP_pct": 79.82343433501067,
+      "mINP_pct": 74.08378953408662,
+      "mean_delta_AP_from_T1_pp": 7.944111980971072
+    }
+  ],
+  "selector_decision_metrics": [
+    {
+      "method": "T1_only",
+      "n": 2020,
+      "beneficial_n": 819,
+      "harmful_n": 75,
+      "neutral_n": 1126,
+      "accepted_n": 0,
+      "beneficial_accept_recall_pct": 0.0,
+      "harmful_reject_recall_pct": 100.0,
+      "accepted_beneficial_precision_pct": null,
+      "accepted_harmful_fraction_pct": null,
+      "neutral_accept_rate_pct": 0.0,
+      "beneficial_missed": 819,
+      "harmful_accepted": 0,
+      "net_fullgallery_delta_AP_pp": 0.0,
+      "total_delta_AP_pp": 0.0
+    },
+    {
+      "method": "All_T2",
+      "n": 2020,
+      "beneficial_n": 819,
+      "harmful_n": 75,
+      "neutral_n": 1126,
+      "accepted_n": 2020,
+      "beneficial_accept_recall_pct": 100.0,
+      "harmful_reject_recall_pct": 0.0,
+      "accepted_beneficial_precision_pct": 40.54455445544555,
+      "accepted_harmful_fraction_pct": 3.7128712871287126,
+      "neutral_accept_rate_pct": 100.0,
+      "beneficial_missed": 0,
+      "harmful_accepted": 75,
+      "net_fullgallery_delta_AP_pp": 11.295878746887599,
+      "total_delta_AP_pp": 22817.675068712953
+    },
+    {
+      "method": "Original_EXP12",
+      "n": 2020,
+      "beneficial_n": 819,
+      "harmful_n": 75,
+      "neutral_n": 1126,
+      "accepted_n": 714,
+      "beneficial_accept_recall_pct": 52.74725274725275,
+      "harmful_reject_recall_pct": 77.33333333333333,
+      "accepted_beneficial_precision_pct": 60.50420168067227,
+      "accepted_harmful_fraction_pct": 2.380952380952381,
+      "neutral_accept_rate_pct": 23.53463587921847,
+      "beneficial_missed": 387,
+      "harmful_accepted": 17,
+      "net_fullgallery_delta_AP_pp": 7.027909654932104,
+      "total_delta_AP_pp": 14196.377502962852
+    },
+    {
+      "method": "EXP15_utility_selector",
+      "n": 2020,
+      "beneficial_n": 819,
+      "harmful_n": 75,
+      "neutral_n": 1126,
+      "accepted_n": 735,
+      "beneficial_accept_recall_pct": 60.317460317460316,
+      "harmful_reject_recall_pct": 84.0,
+      "accepted_beneficial_precision_pct": 67.21088435374149,
+      "accepted_harmful_fraction_pct": 1.6326530612244898,
+      "neutral_accept_rate_pct": 20.33747779751332,
+      "beneficial_missed": 325,
+      "harmful_accepted": 12,
+      "net_fullgallery_delta_AP_pp": 7.944111980971072,
+      "total_delta_AP_pp": 16047.106201561564
+    }
+  ],
+  "PID_cluster_bootstrap_exploratory": {
+    "new_minus_old": {
+      "observed_pp": 0.9162023260389668,
+      "exploratory_CI95_pp": [
+        0.39716983156733465,
+        1.4772336653115206
+      ],
+      "n_PID_clusters": 271,
+      "n_bootstrap": 1200
+    },
+    "new_minus_all": {
+      "observed_pp": -3.3517667659165284,
+      "exploratory_CI95_pp": [
+        -3.870851507373516,
+        -2.8078251436208035
+      ],
+      "n_PID_clusters": 271,
+      "n_bootstrap": 1200
+    },
+    "new_minus_T1": {
+      "observed_pp": 7.944111980971072,
+      "exploratory_CI95_pp": [
+        7.066014521563626,
+        8.830397179382357
+      ],
+      "n_PID_clusters": 271,
+      "n_bootstrap": 1200
+    }
+  },
+  "critical_limits": [
+    "Teacher uses true TRAIN PID to construct T2. This is NOT a deployable Val/Test retrieval result.",
+    "Holdout PID means not used for fitting EXP15 selector, but frozen IRRA originally trained on all TRAIN identities.",
+    "Labels derive from full-gallery AP for known TRAIN PID, not semantic facts or visually verified true/false attributes.",
+    "A/B excluded from each query ranking, C and other same-PID images retained as positives.",
+    "Four non-overlapping 440-PID fit galleries match the holdout identity count; image counts may still differ.",
+    "Score-beta, pair sampler, EXP12 original gate are frozen; C/gallery ranks never entered new selector inputs.",
+    "Only 3-class 9-feature softmax is fitted; no student, IRRA or attribute model is trained.",
+    "No guarantee teacher benefit transfers to single-text student with no T2 at inference.",
+    "A finite positive AP delta may arise from text-embedding smoothing, not new identity semantics.",
+    "Fit and holdout galleries each have 440 identities, but image count and composition vary; AP utility label prevalence may differ.",
+    "This is internal teacher diagnostic and NOT official Validation R1, Test R1 or paper-ready improvement."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": "bidirectional_graph_g0g5_20261022_v1",
+  "fingerprint": "5afc2a9d720fdcf3a433a90d0fc0c796fa455a4dd793545899b0298a044e6529",
+  "settings": {
+    "version": "bidirectional_graph_g0g5_20261022_v1",
+    "mode": "independent",
+    "baseline_checkpoint_sha256": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+    "baseline_config_sha256": "ec2fae46ec4e0cce06372789afe1c877a5cebeddf73654781e11b0484fc30fac",
+    "graph_k": 8,
+    "graph_cos_threshold": 0.7,
+    "graph_alpha": 0.3,
+    "rrf_k": 60,
+    "rrf_blend": 0.2,
+    "query_sim_tau": 0.08,
+    "query_gate_floor": 0.3,
+    "reverse_rank_scale": 64.0,
+    "compete_topk": 50,
+    "compete_margin": 0.03,
+    "compete_strength": 0.15,
+    "train_reference_count": 2048,
+    "seed": 20261021
+  },
+  "synthetic": false,
+  "protocol": "固定Train2048文本参考：每条Val查询独立",
+  "labels_policy": "Validation PID 仅用于metrics/edge_diagnostics，不进入算法；仅在Val探索",
+  "warnings": [
+    "不根据Val PID学习模型或建图",
+    "Val多分支对比不能代替最终独立Test",
+    "G2的双向排名在两个模式下参考集不同，不能直接横向混称为同一协议"
+  ]
+}

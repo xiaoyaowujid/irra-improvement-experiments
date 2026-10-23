@@ -1,0 +1,32 @@
+{
+  "version": "step16_lora_last2_mlp_hardneg_control_v1_20261022",
+  "checkpoint_sha": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "source_fp": "8fdacfd6141033b39a51e699508d34c866559aa70955bd3e773dc92a8afc6bd9",
+  "source_hashes": {
+    "train_images": "1ced2b62f284a36aabd298c8f9d71de35e0bb7852d19f9fbca30ac8b85f206d1",
+    "train_texts": "fc03473e12e03b6816709a2f60c2addbfad36ec1e990ad3d6088b90736de80f6",
+    "val_images": "c319bc5c33fda03eb7beb0e5992a1dd09d555eac1cd2bff376985c12abb091e0",
+    "val_texts": "9393426112a36d7930713cb3c634b3e621288596f8d57888572e0ed067704280"
+  },
+  "methods": [
+    "A1_random_lora_protect",
+    "A2_H1_lora_protect"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "steps": 1000,
+  "accum": 4,
+  "lora_rank": 8,
+  "scale": 16.0,
+  "last_blocks": 2,
+  "lr": 0.0001,
+  "protect": 1.0,
+  "distill": 0.05,
+  "val_only": true,
+  "test_used": false,
+  "baseline": "B0 Epoch58",
+  "note": "P1 only historical comparator"
+}

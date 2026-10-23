@@ -1,0 +1,119 @@
+{
+  "experiment": "13",
+  "scope": "EXP12 internal holdout teacher selection audit ONLY",
+  "exp12_path": "G:\\PyCharmProjects\\IRRA\\IRRA-main\\图文双向互补实验\\实验12_最佳IRRA同身份文本互补迁移_20261021_164528",
+  "verified_checkpoint_sha256": "f3ab12028e3406546b836ed6a75c8fc5e02a42146c5da13af423e7f5cf0e7ea6",
+  "exp12_settings_hash": "d2765434444c35ddd7d993c28e3caca813e45711eb58cf2214d85beb3039b9e7",
+  "reproduced_exp12": {
+    "matched": true,
+    "exp12_triple_view_count": 2020,
+    "exp12_holdout_support_accept_rate": 0.3434718100890208,
+    "tolerance": 3e-05,
+    "methods_reproduced": [
+      "t1_only",
+      "all_same_pid",
+      "filtered_same_pid"
+    ]
+  },
+  "summary": {
+    "n_eligible": 2020,
+    "distinct_train_holdout_pids": 271,
+    "accepted": 714,
+    "rejected": 1306,
+    "rejected_but_potentially_helpful": 1054,
+    "accepted_but_potentially_harmful": 52,
+    "rejected_share_among_potentially_helpful": 0.6142191142191142,
+    "accepted_share_among_potentially_harmful": 0.17275747508305647,
+    "potential_helpful_count": 1716,
+    "potential_harmful_count": 301,
+    "threshold_for_benefit": 1e-07,
+    "groups": [
+      {
+        "group": "all_eligible",
+        "n": 2020,
+        "fraction_of_eligible": 1.0,
+        "potential_improve_rate": 0.8495049504950495,
+        "potential_harm_rate": 0.149009900990099,
+        "potential_neutral_rate": 0.0014851485148514852,
+        "mean_potential_delta": 0.048823174089193344,
+        "median_potential_delta": 0.044462159276008606,
+        "mean_abs_potential_delta": 0.05419168993830681,
+        "t1_pair_win_rate": 0.6128712871287129,
+        "t1_plus_t2_pair_win_rate": 0.7658415841584159,
+        "pair_corrected": 328,
+        "pair_broken": 19,
+        "mean_gate_probability": 0.8930171728134155,
+        "mean_novelty_proxy": 0.39953866600990295
+      },
+      {
+        "group": "accepted",
+        "n": 714,
+        "fraction_of_eligible": 0.35346534653465345,
+        "potential_improve_rate": 0.927170868347339,
+        "potential_harm_rate": 0.07282913165266107,
+        "potential_neutral_rate": 0.0,
+        "mean_potential_delta": 0.0720505490899086,
+        "median_potential_delta": 0.0712079405784607,
+        "mean_abs_potential_delta": 0.07591705769300461,
+        "t1_pair_win_rate": 0.4579831932773109,
+        "t1_plus_t2_pair_win_rate": 0.7212885154061625,
+        "pair_corrected": 193,
+        "pair_broken": 5,
+        "mean_gate_probability": 0.8983624577522278,
+        "mean_novelty_proxy": 0.5735648274421692
+      },
+      {
+        "group": "rejected",
+        "n": 1306,
+        "fraction_of_eligible": 0.6465346534653466,
+        "potential_improve_rate": 0.8070444104134763,
+        "potential_harm_rate": 0.19065849923430322,
+        "potential_neutral_rate": 0.002297090352220521,
+        "mean_potential_delta": 0.03612459450960159,
+        "median_potential_delta": 0.03182972967624664,
+        "mean_abs_potential_delta": 0.04231427609920502,
+        "t1_pair_win_rate": 0.6975497702909648,
+        "t1_plus_t2_pair_win_rate": 0.7901990811638591,
+        "pair_corrected": 135,
+        "pair_broken": 14,
+        "mean_gate_probability": 0.8900948166847229,
+        "mean_novelty_proxy": 0.30439722537994385
+      }
+    ]
+  },
+  "pid_cluster_bootstrap": {
+    "resamples": 1500,
+    "cluster_count": 271,
+    "percentile_95": {
+      "rejected_helpful_fraction": [
+        0.7847562197150928,
+        0.8277078412706064
+      ],
+      "accepted_helpful_fraction": [
+        0.9056957208639193,
+        0.9482408871782169
+      ],
+      "accepted_minus_rejected_mean_margin_delta": [
+        0.031237318739295007,
+        0.04023164007812738
+      ],
+      "rejected_harmful_fraction": [
+        0.17005261348510356,
+        0.21299530539470668
+      ],
+      "accepted_harmful_fraction": [
+        0.051759112821783124,
+        0.09430427913608075
+      ]
+    }
+  },
+  "limitations": [
+    "Third-view C and the true TRAIN PID are used for POST-HOC diagnosis only; not for T2 selection or deployment",
+    "Useful/harmful means the sign of the third-view pairwise margin delta against a fixed T1-mined negative D; not manually verified semantic correctness",
+    "Only samples with A,B,C distinct images are eligible; results do not represent all training captions or Val",
+    "EXP12 same-PID gate is not a genuine same-person factual-harm classifier and text-similar wrong-PID controls were weakly matched",
+    "Two captions from the same PID and multiple PID samples are dependent; cluster bootstrap is exploratory",
+    "This is teacher-side analysis; no new student training and no new retrieval R1 gain is claimed",
+    "Do not tune EXP12 selector using this C diagnostic without an independent PID-separated evaluation"
+  ]
+}
